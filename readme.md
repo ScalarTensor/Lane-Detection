@@ -34,7 +34,7 @@ The first approach was to simply collect all the points in the lane, find the to
 
 ### Approach 2 - Average Slope 
 
-Another, more robust way that should work theorhetically would be to predict the x coordinates based on the average slope and solving for it with the average slope and average y and y intercept.
+Another, more robust way that should work theoretically would be to predict the x coordinates based on the average slope and solving for it with the average slope and average y and y intercept.
 
 ```python
     # Average slope Approach
@@ -60,7 +60,7 @@ This however would get thrown off by outliers returned by the Hough transform.
 
 ### Approach 3 - Curve fitting
 
-This felt like the most robust way to connect the dots by using numpy to generate a polynomial curve that modeled each lane, and the one that I'm using in my submission. I'm definitely the most happy with the results for this one becuase it allows us to generate sensible x values to complete the lanes when there are dashed lines in the road.
+This felt like the most robust way to connect the dots by using numpy to generate a polynomial curve that modeled each lane, and the one that I'm using in my submission. I'm definitely the most happy with the results for this one because it allows us to generate sensible x values to complete the lanes when there are dashed lines in the road.
 
 ```python
     # Curve fitting approach
