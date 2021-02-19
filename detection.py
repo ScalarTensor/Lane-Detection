@@ -52,7 +52,7 @@ def draw_lines(img, lines, color=[255, 0, 0], thickness=8):
     min_right_x, min_right_y = right_lines.min(axis=0)
 
     # Left lane
-    # all positive  slopes go into left "lane"
+    # all positive slopes go into left "lane"
     left_slopes = slopes[slopes > 0]
     left_lines = np.array(list(filter(lambda x: x[0] < (img.shape[1]/2), lines)))
     max_left_x, max_left_y = left_lines.max(axis=0)
